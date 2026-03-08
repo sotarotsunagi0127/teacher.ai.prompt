@@ -64,7 +64,7 @@ export function PromptListClient({ initialFilters }: PromptListClientProps) {
       <div className="grid gap-3 rounded-lg border border-border bg-white p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="キーワードで検索" className="xl:col-span-2" />
 
-        <Select value={schoolLevel || "all"} onValueChange={(value) => setSchoolLevel(value === "all" ? "" : value)}>
+        <Select value={schoolLevel || "all"} onValueChange={(value) => setSchoolLevel(value === "all" ? "" : (value as SchoolLevel))}>
           <SelectTrigger>
             <SelectValue placeholder="校種" />
           </SelectTrigger>
@@ -78,7 +78,7 @@ export function PromptListClient({ initialFilters }: PromptListClientProps) {
           </SelectContent>
         </Select>
 
-        <Select value={useCase || "all"} onValueChange={(value) => setUseCase(value === "all" ? "" : value)}>
+        <Select value={useCase || "all"} onValueChange={(value) => setUseCase(value === "all" ? "" : (value as UseCase))}>
           <SelectTrigger>
             <SelectValue placeholder="用途" />
           </SelectTrigger>
@@ -92,7 +92,7 @@ export function PromptListClient({ initialFilters }: PromptListClientProps) {
           </SelectContent>
         </Select>
 
-        <Select value={subject || "all"} onValueChange={(value) => setSubject(value === "all" ? "" : value)}>
+        <Select value={subject || "all"} onValueChange={(value) => setSubject(value === "all" ? "" : (value as Subject))}>
           <SelectTrigger>
             <SelectValue placeholder="教科" />
           </SelectTrigger>
@@ -106,7 +106,7 @@ export function PromptListClient({ initialFilters }: PromptListClientProps) {
           </SelectContent>
         </Select>
 
-        <Select value={difficulty || "all"} onValueChange={(value) => setDifficulty(value === "all" ? "" : value)}>
+        <Select value={difficulty || "all"} onValueChange={(value) => setDifficulty(value === "all" ? "" : (value as Difficulty))}>
           <SelectTrigger>
             <SelectValue placeholder="難易度" />
           </SelectTrigger>
