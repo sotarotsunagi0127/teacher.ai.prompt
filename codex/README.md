@@ -111,9 +111,19 @@ npm run dev
 
 ## Vercelデプロイ
 
+### ダッシュボードから
 1. GitHubへpush
 2. VercelでプロジェクトをImport
-3. Framework Presetを`Next.js`のままDeploy
+3. Root Directoryを`codex`に設定
+4. Framework Presetを`Next.js`のままDeploy
+
+### GitHub Actionsから
+- `.github/workflows/vercel-deploy.yml` を利用
+- GitHub Secretsに以下を設定
+  - `VERCEL_TOKEN`
+  - `VERCEL_ORG_ID`
+  - `VERCEL_PROJECT_ID`
+- `main`へのpushで本番デプロイ
 
 ## SEO対応
 
