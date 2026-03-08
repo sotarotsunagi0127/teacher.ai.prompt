@@ -1,0 +1,11 @@
+codex/node_modules
+codex/.next
+codex/out
+codex/.vercel
+codex/.env*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+codex/*.tsbuildinfo
